@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **authors** (repo: $slug).
+> Schema package for table **authors** (repo: `authors`).
 
 ## Files
 ```
@@ -55,20 +55,20 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/001_table.sql
 ```mermaid
 erDiagram
   AUTHORS {
-    BIGINT id PK
-    VARCHAR(255) name
-    VARCHAR(255) slug
-    TEXT bio
-    VARCHAR(255) photo_url
-    LONGTEXT story
+    INT id PK
+    VARCHAR name
+    VARCHAR slug
+    VARCHAR bio
+    VARCHAR photo_url
+    VARCHAR story
     INT books_count
     INT ratings_count
     INT rating_sum
-    DECIMAL(3,2) avg_rating
-    DATETIME(6) last_rating_at
-    DATETIME(6) created_at
-    DATETIME(6) updated_at
-    DATETIME(6) deleted_at
+    DECIMAL avg_rating
+    DATETIME last_rating_at
+    DATETIME created_at
+    DATETIME updated_at
+    DATETIME deleted_at
   }
 ```
 
