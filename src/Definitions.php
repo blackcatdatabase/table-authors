@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\Authors;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'authors'; }
-    public static function contractView(): string { return 'v_authors_contract'; }
+    public static function contractView(): string { return 'vw_authors'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'name', 'slug', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'deleted_at' ]; }
     public static function pk(): string { return 'id'; }
