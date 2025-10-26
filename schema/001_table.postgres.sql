@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.psd1 (map@mtime:2025-10-24T09:46:38Z)
+-- Auto-generated from schema-map-postgres.psd1 (map@38d5403)
 -- engine: postgres
 -- table:  authors
 CREATE TABLE IF NOT EXISTS authors (
@@ -15,5 +15,7 @@ CREATE TABLE IF NOT EXISTS authors (
   last_rating_at TIMESTAMPTZ(6) NULL,
   created_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   updated_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  version INTEGER NOT NULL DEFAULT 0,
+  CONSTRAINT chk_authors_version CHECK (version >= 0),
   deleted_at TIMESTAMPTZ(6) NULL
 );
