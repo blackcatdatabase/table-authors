@@ -1,4 +1,4 @@
--- Auto-generated from schema-views-postgres.psd1 (map@38d5403)
+-- Auto-generated from schema-views-postgres.psd1 (map@c5e4097)
 -- engine: postgres
 -- table:  authors
 -- Contract view for [authors]
@@ -17,5 +17,6 @@ SELECT
   last_rating_at,
   created_at,
   updated_at,
+  version,
   deleted_at
 FROM authors;

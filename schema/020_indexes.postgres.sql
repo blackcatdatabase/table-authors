@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.psd1 (map@38d5403)
+-- Auto-generated from schema-map-postgres.psd1 (map@c5e4097)
 -- engine: postgres
 -- table:  authors
 CREATE INDEX IF NOT EXISTS idx_authors_avg_rating ON authors (avg_rating);
