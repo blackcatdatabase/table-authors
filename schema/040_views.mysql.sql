@@ -4,6 +4,7 @@
 -- Contract view for [authors]
 CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_authors AS
 SELECT
+  tenant_id,
   id,
   name,
   slug,

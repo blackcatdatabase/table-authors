@@ -5,6 +5,7 @@
 CREATE OR REPLACE VIEW vw_authors AS
 SELECT
   id,
+  tenant_id,
   name,
   slug,
   bio,
