@@ -1,9 +1,10 @@
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  authors
 -- Contract view for [authors]
 CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_authors AS
 SELECT
+  tenant_id,
   id,
   name,
   slug,
