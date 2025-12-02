@@ -1,6 +1,7 @@
--- Auto-generated from feature-modules-mysql.psd1 (map@mtime:2025-11-27T17:06:04Z)
+-- Auto-generated from feature-modules-mysql.yaml (map@94ebe6c)
 -- engine: mysql
 -- table:  book_assets_catalog_health_summary
+
 -- High-level catalog health
 CREATE OR REPLACE ALGORITHM=TEMPTABLE SQL SECURITY INVOKER VIEW vw_book_assets_catalog_health_summary AS
 SELECT
