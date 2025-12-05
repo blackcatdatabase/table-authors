@@ -27,7 +27,7 @@ final class AuthorDto implements \JsonSerializable {
         public readonly \DateTimeImmutable $updatedAt,
         public readonly int $version,
         public readonly ?\DateTimeImmutable $deletedAt,
-        public readonly ?bool $isLive
+        public readonly ?int $isLive
     ) {}
 
     /** Suitable for serialization/logging (without large blobs). */

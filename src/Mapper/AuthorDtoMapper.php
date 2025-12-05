@@ -20,9 +20,9 @@ final class AuthorDtoMapper
     private const COL_TO_PROP = [ 'id' => 'id', 'tenant_id' => 'tenantId', 'name' => 'name', 'slug' => 'slug', 'slug_ci' => 'slugCi', 'bio' => 'bio', 'photo_url' => 'photoUrl', 'story' => 'story', 'books_count' => 'booksCount', 'ratings_count' => 'ratingsCount', 'rating_sum' => 'ratingSum', 'avg_rating' => 'avgRating', 'last_rating_at' => 'lastRatingAt', 'created_at' => 'createdAt', 'updated_at' => 'updatedAt', 'version' => 'version', 'deleted_at' => 'deletedAt', 'is_live' => 'isLive' ];
 
     /** @var string[] */
-    private const BOOL_COLS   = [ 'is_live' ];
+    private const BOOL_COLS   = [];
     /** @var string[] */
-    private const INT_COLS    = [ 'id', 'tenant_id', 'books_count', 'ratings_count', 'rating_sum', 'version' ];
+    private const INT_COLS    = [ 'id', 'tenant_id', 'books_count', 'ratings_count', 'rating_sum', 'version', 'is_live' ];
     /** @var string[] */
     private const FLOAT_COLS  = [ 'avg_rating' ];
     /** @var string[] */
