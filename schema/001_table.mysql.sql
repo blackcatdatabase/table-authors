@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.yaml (map@sha1:5E62933580349BE7C623D119AC9D1301A62F03EF)
+-- Auto-generated from schema-map-mysql.yaml (map@sha1:09DF9CA612D1573E058190CC207FA257C05AEC1F)
 -- engine: mysql
 -- table:  authors
 
@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS authors (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   tenant_id BIGINT UNSIGNED NOT NULL,
   name VARCHAR(255) NOT NULL,
+  name_ci VARCHAR(255) GENERATED ALWAYS AS (LOWER(name)) STORED,
   slug VARCHAR(255) NOT NULL,
   slug_ci VARCHAR(255) GENERATED ALWAYS AS (LOWER(slug)) STORED,
   bio TEXT NULL,

@@ -32,19 +32,19 @@ final class Criteria extends BaseCriteria
     /** Columns that are safe to use inside WHERE filters. */
     protected function filterable(): array
     {
-        return [ 'id', 'tenant_id', 'name', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
+        return [ 'id', 'tenant_id', 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
     }
 
     /** Columns used for full-text LIKE/ILIKE searches. */
     protected function searchable(): array
     {
-        return [ 'name', 'slug', 'slug_ci', 'bio', 'photo_url', 'story' ];
+        return [ 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story' ];
     }
 
 /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
 protected function sortable(): array
 {
-    return [ 'id', 'tenant_id', 'name', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
+    return [ 'id', 'tenant_id', 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
 }
 
     /**
