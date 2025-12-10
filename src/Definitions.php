@@ -8,7 +8,7 @@ final class Definitions {
     public static function table(): string { return 'authors'; }
     public static function contractView(): string { return 'vw_authors'; }
     /** @return string[] */
-    public static function columns(): array { return [ 'id', 'tenant_id', 'name', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ]; }
+    public static function columns(): array { return [ 'id', 'tenant_id', 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ]; }
 
     /** @var array<string,array<int,string>> */
     public const STATUS_TRANSITIONS = [];
@@ -69,7 +69,7 @@ final class Definitions {
     public static function paramAliases(): array { return []; }
 
     /** @return string[] columns that are generated/virtual and must be excluded from INSERT/UPSERT input */
-    public static function generatedColumns(): array { return [ 'slug_ci', 'is_live' ]; }
+    public static function generatedColumns(): array { return [ 'name_ci', 'slug_ci', 'is_live' ]; }
     
     /** Repository hint: is the version column actually numeric? (no information_schema needed) */
     public static function versionIsNumeric(): bool

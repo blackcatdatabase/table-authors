@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.yaml (map@sha1:F0EE237771FBA8DD7C4E886FF276F91A862C3718)
+-- Auto-generated from schema-map-postgres.yaml (map@sha1:6D9B52237D942B2B3855FD0F5500331B935A7C62)
 -- engine: postgres
 -- table:  authors
 
@@ -10,4 +10,4 @@ CREATE INDEX IF NOT EXISTS idx_authors_avg_rating ON authors (avg_rating);
 
 CREATE INDEX IF NOT EXISTS idx_authors_books_count ON authors (books_count);
 
-CREATE INDEX IF NOT EXISTS idx_authors_name_ci   ON authors (lower(name));
+CREATE INDEX IF NOT EXISTS idx_authors_name_ci   ON authors (tenant_id, name_ci);

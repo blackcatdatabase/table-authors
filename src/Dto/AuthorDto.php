@@ -13,6 +13,7 @@ final class AuthorDto implements \JsonSerializable {
         public readonly int $id,
         public readonly int $tenantId,
         #[\SensitiveParameter] public readonly string $name,
+        public readonly ?string $nameCi,
         public readonly string $slug,
         public readonly ?string $slugCi,
         public readonly ?string $bio,
