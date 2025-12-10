@@ -98,11 +98,12 @@ graph LR
 _No engine differences detected._
 
 ## Constraints Snapshot
-- `avg_rating` – default=NULL
 - `books_count` – default=0
-- `created_at` – default=CURRENT_TIMESTAMP(6)
-- `rating_sum` – default=0
 - `ratings_count` – default=0
+- `rating_sum` – default=0
+- `avg_rating` – default=NULL
+- `created_at` – default=CURRENT_TIMESTAMP(6)
+- `updated_at` – default=CURRENT_TIMESTAMP(6)
 
 ## Schema Files
 | File | Engine |
