@@ -5,20 +5,20 @@ Authors and aggregate rating counters.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| avg_rating | mysql: DECIMAL(3,2) / postgres: NUMERIC(3,2) | YES | NULL | Average rating (derived). |
-| bio | TEXT | YES |  | Short biography. |
-| books_count | mysql: INT / postgres: INTEGER | NO | 0 | Denormalized number of books. |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row creation time (UTC). |
-| deleted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Soft delete timestamp. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| last_rating_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Timestamp of last rating. |
 | name | VARCHAR(255) | NO |  | Author display name. |
+| slug | VARCHAR(255) | NO |  | URL-friendly unique slug. |
+| bio | TEXT | YES |  | Short biography. |
 | photo_url | VARCHAR(255) | YES |  | Profile photo URL. |
+| story | mysql: LONGTEXT / postgres: TEXT | YES |  | Long-form story/notes. |
+| books_count | mysql: INT / postgres: INTEGER | NO | 0 | Denormalized number of books. |
 | ratings_count | mysql: INT / postgres: INTEGER | NO | 0 | Total ratings count. |
 | rating_sum | mysql: INT / postgres: INTEGER | NO | 0 | Sum of rating values. |
-| slug | VARCHAR(255) | NO |  | URL-friendly unique slug. |
-| story | mysql: LONGTEXT / postgres: TEXT | YES |  | Long-form story/notes. |
+| avg_rating | mysql: DECIMAL(3,2) / postgres: NUMERIC(3,2) | YES | NULL | Average rating (derived). |
+| last_rating_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Timestamp of last rating. |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row creation time (UTC). |
 | updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row update time (UTC). |
+| deleted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Soft delete timestamp. |
 
 ## Engine Details
 
