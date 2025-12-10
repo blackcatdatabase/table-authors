@@ -14,8 +14,8 @@ Authors and aggregate rating counters.
 | last_rating_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Timestamp of last rating. |
 | name | VARCHAR(255) | NO |  | Author display name. |
 | photo_url | VARCHAR(255) | YES |  | Profile photo URL. |
-| rating_sum | mysql: INT / postgres: INTEGER | NO | 0 | Sum of rating values. |
 | ratings_count | mysql: INT / postgres: INTEGER | NO | 0 | Total ratings count. |
+| rating_sum | mysql: INT / postgres: INTEGER | NO | 0 | Sum of rating values. |
 | slug | VARCHAR(255) | NO |  | URL-friendly unique slug. |
 | story | mysql: LONGTEXT / postgres: TEXT | YES |  | Long-form story/notes. |
 | updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row update time (UTC). |
