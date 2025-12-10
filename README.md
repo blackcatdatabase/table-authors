@@ -17,7 +17,7 @@
 | What | Link | Notes |
 | --- | --- | --- |
 | Schema map | [schema-map-postgres.yaml](https://github.com/blackcatacademy/blackcat-database/blob/main/scripts/schema/schema-map-postgres.yaml) | Source for table metadata |
-| Pkg folder | [packages\authors](https://github.com/blackcatacademy/blackcat-database/blob/main/packages\authors) | Repo location |
+| Pkg folder | [packages\authors](https://github.com/blackcatacademy/blackcat-database/blob/main/packages/authors) | Repo location |
 | Definitions | [docs/definitions.md](docs/definitions.md) | Column/index/FK docs |
 | Engine differences | [docs/definitions.md#engine-differences](docs/definitions.md#engine-differences) | Drift section in definitions |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) | Recent changes |
@@ -98,10 +98,10 @@ graph LR
 _No engine differences detected._
 
 ## Constraints Snapshot
-- `avg_rating` – default=NULL
 - `books_count` – default=0
 - `created_at` – default=CURRENT_TIMESTAMP(6)
 - `rating_sum` – default=0
+- `avg_rating` – default=NULL
 - `ratings_count` – default=0
 
 ## Schema Files
