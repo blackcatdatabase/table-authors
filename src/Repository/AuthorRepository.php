@@ -252,6 +252,7 @@ use OrderByTools, PkTools, RepositoryHelpers;
           ));
           if (!$rows) { return 0; }
 
+          /** @var list<string> $updCols */
           $updCols = [ 'name', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'updated_at', 'version', 'deleted_at' ];
           if ($updCols && $soft && !in_array($soft, $updCols, true)) { $updCols[] = $soft; }
 
