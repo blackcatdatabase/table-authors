@@ -1,0 +1,65 @@
+{
+  "tables": {
+    "authors": {
+      "columns": {
+        "avg_rating": {
+          "strategy": "passthrough"
+        },
+        "bio": {
+          "strategy": "passthrough"
+        },
+        "books_count": {
+          "strategy": "passthrough"
+        },
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "deleted_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "is_live": {
+          "strategy": "passthrough"
+        },
+        "last_rating_at": {
+          "strategy": "passthrough"
+        },
+        "name": {
+          "strategy": "passthrough"
+        },
+        "name_ci": {
+          "strategy": "passthrough"
+        },
+        "photo_url": {
+          "strategy": "passthrough"
+        },
+        "rating_sum": {
+          "strategy": "passthrough"
+        },
+        "ratings_count": {
+          "strategy": "passthrough"
+        },
+        "slug": {
+          "strategy": "passthrough"
+        },
+        "slug_ci": {
+          "strategy": "passthrough"
+        },
+        "story": {
+          "strategy": "passthrough"
+        },
+        "tenant_id": {
+          "strategy": "passthrough"
+        },
+        "updated_at": {
+          "strategy": "passthrough"
+        },
+        "version": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
