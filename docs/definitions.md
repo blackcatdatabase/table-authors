@@ -3,22 +3,27 @@
 Authors and aggregate rating counters.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| name | VARCHAR(255) | NO |  | Author display name. |
-| slug | VARCHAR(255) | NO |  | URL-friendly unique slug. |
-| bio | TEXT | YES |  | Short biography. |
-| photo_url | VARCHAR(255) | YES |  | Profile photo URL. |
-| story | mysql: LONGTEXT / postgres: TEXT | YES |  | Long-form story/notes. |
-| books_count | mysql: INT / postgres: INTEGER | NO | 0 | Denormalized number of books. |
-| ratings_count | mysql: INT / postgres: INTEGER | NO | 0 | Total ratings count. |
-| rating_sum | mysql: INT / postgres: INTEGER | NO | 0 | Sum of rating values. |
-| avg_rating | mysql: DECIMAL(3,2) / postgres: NUMERIC(3,2) | YES | NULL | Average rating (derived). |
-| last_rating_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Timestamp of last rating. |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row creation time (UTC). |
-| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row update time (UTC). |
-| deleted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Soft delete timestamp. |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |  |
+| name | VARCHAR(255) | NO |  | Author display name. |  |
+| name_ci | mysql: VARCHAR(255) / postgres: TEXT | YES |  | Generated lowercase name used for case-insensitive search/uniqueness. |  |
+| slug | VARCHAR(255) | NO |  | URL-friendly unique slug. |  |
+| slug_ci | mysql: VARCHAR(255) / postgres: TEXT | YES |  | Generated lowercase slug used for case-insensitive uniqueness. |  |
+| bio | TEXT | YES |  | Short biography. |  |
+| photo_url | VARCHAR(255) | YES |  | Profile photo URL. |  |
+| story | mysql: LONGTEXT / postgres: TEXT | YES |  | Long-form story/notes. |  |
+| books_count | mysql: INT / postgres: INTEGER | NO | 0 | Denormalized number of books. |  |
+| ratings_count | mysql: INT / postgres: INTEGER | NO | 0 | Total ratings count. |  |
+| rating_sum | mysql: INT / postgres: INTEGER | NO | 0 | Sum of rating values. |  |
+| avg_rating | mysql: DECIMAL(3,2) / postgres: NUMERIC(3,2) | YES | NULL | Average rating (derived). |  |
+| last_rating_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Timestamp of last rating. |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row creation time (UTC). |  |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Row update time (UTC). |  |
+| version | mysql: INT / postgres: INTEGER | NO | 0 | Optimistic locking version counter. |  |
+| deleted_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Soft delete timestamp. |  |
+| is_live | mysql: TINYINT(1) / postgres: BOOLEAN | YES |  | Generated flag (deleted_at IS NULL). |  |
 
 ## Engine Details
 

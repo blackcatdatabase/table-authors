@@ -41,11 +41,11 @@ final class Criteria extends BaseCriteria
         return [ 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story' ];
     }
 
-/** Columns allowed in ORDER BY (falls back to filterable() when empty). */
-protected function sortable(): array
-{
-    return [ 'id', 'tenant_id', 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
-}
+    /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
+    protected function sortable(): array
+    {
+        return [ 'id', 'tenant_id', 'name', 'name_ci', 'slug', 'slug_ci', 'bio', 'photo_url', 'story', 'books_count', 'ratings_count', 'rating_sum', 'avg_rating', 'last_rating_at', 'created_at', 'updated_at', 'version', 'deleted_at', 'is_live' ];
+    }
 
     /**
      * Whitelist of joinable entities (for safe ->join() usage):
